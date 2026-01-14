@@ -1,0 +1,21 @@
+# Python
+*.pyc
+*.pyo
+__pycache__
+*.egg-info/
+.eggs/
+dist/
+build/
+venv/
+.venv/
+.tox/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# IDEs and OS files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
