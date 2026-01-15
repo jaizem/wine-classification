@@ -36,44 +36,41 @@ Aeberhard, S. & Forina, M. (1992). Wine [Dataset]. UCI Machine Learning Reposito
 Donated by Riccardo Leardi (riclea@anchem.unige.it).
 
 ## Environment Setup
+This project uses Conda to manage dependencies.
 
-### Step-by-Step Instructions for the Environment
+### Prerequisites
+- Conda (Miniconda or Anaconda)
+- Python 3.11 (handled automatically by Conda)
 
-1. **Create a Conda Environment:**
-   To set up the project environment, we will be using Conda. If you don't have Conda installed, you can install [Miniconda](https://docs.conda.io/en/latest/miniconda.html) or [Anaconda](https://www.anaconda.com/products/individual).
+### Automatic Setup (Recommended)
 
-   Once Conda is installed, open a terminal (or Anaconda Prompt) and run the following command to create a new environment named `clustering`:
+From the project root, run:
+```
+chmod +x setup.sh
+./setup.sh
+```
+This script will:
+- create the Conda environment from requirements.yml (if it does not already exist)
+- activate the environment
+- install the project in editable mode (if applicable)
+After setup, activate the environment with:
+```
+conda activate wine_classification
+```
+### Jupyter Notebook Usage (Optional)
+Once the environment is activated, launch Jupyter:
+```
+jupyter notebook
+```
+You can then open and run the notebooks in the notebooks/ directory.
 
-   ```bash
-   conda env create -f requirements.yml
-   ```
-   This command will create a new environment and automatically install all the required dependencies listed in the requirements.yml file.
-
-2. **Activate the Conda Environment:**
-    After the environment is created, activate it by running:
-    ```bash
-    conda activate clustering
-    ```
-    This ensures that you are using the correct Python environment for the project.
-
-3. **Install Dependencies (If Required):**
-    If for any reason you need to install additional dependencies or update the environment later, you can use the following command:
-
-    ```bash
-    conda env update -f requirements.yml
-    ```
-    This will ensure that all dependencies are installed and up-to-date based on the requirements.yml file.
-
-4. **Jupyter Notebook Setup (Optional):**
-    Once the environment is activated, you can open a Jupyter Notebook to work on the project. Simply run the following command:
-
-    ```bash
-    jupyter notebook
-    ```
-    This will launch Jupyter in your default browser, and you can start working on the notebooks for the project.
+### Updating Dependencies
+If requirements.yml changes, update the environment with:
+```
+conda env update -f requirements.yml
+```
 
 ## Installing Dependencies Using `requirements.yml`
-
 To install the dependencies, you should have the `requirements.yml` file provided. It includes a list of all the necessary packages and versions for the project. Below is a breakdown of the key dependencies included in the `requirements.yml` file for setting up the environment.
 
 ### Dependencies Breakdown
